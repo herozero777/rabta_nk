@@ -46,6 +46,8 @@ defmodule RabtaNk.MixProject do
       {:jason, "~> 1.0"},
       {:plug_cowboy, "~> 2.0"},
 
+      {:nerves_time, "~> 0.2"},
+      {:atecc508a, "~> 0.2.1"},
       {:x509, github: "voltone/x509", branch: "bram/engine-csr", override: true},
       {:poison, "~> 3.1"},
     ]

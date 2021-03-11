@@ -10,15 +10,20 @@ defmodule RabtaNkWeb.UserView do
     }
   end
 
+
 #  def render("sign.json", %{device_cert: device_cert}) do
+#    %{ data: %{device_cert: device_cert} }
+#  end
+
   def render("sign.json", %{device_cert: device_cert}) do
     # Sol 1
 #    Poison.encode!( %{ data: device_cert } )
+    %{ data: device_cert }
     # Sol 2
 #    %{ data: %{device_cert: device_cert} }
     # Sol 3
 #    %{data: render_one(device_cert, UserView, "ca_certificate.json")}
-    %{data: render_one(device_cert, UserView, "device_certificate.json")}
+#    %{data: render_one(device_cert, UserView, "device_certificate.json")}
   end
 
   def render("handle.json", %{device_cert: dc} ) do
